@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-theme: #5271FF;
+} 
+
+@font-face {
+    font-family: 'code-pro';
+    src: url("/fonts/code-pro/static/SourceCodePro-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url("/fonts/open-sans/static/OpenSans-Regular.ttf");
+}
+
+#container {
+    display: grid;
+    grid-template-columns: .35fr 1fr;
+    grid-template-rows: .13fr 1fr;
+    grid-template-areas: "header header"
+        "insersion-data grafic-plot";
+    height: 100vmin;
+    width: 100%;
+    gap: 15px;
+}
+
+#header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    box-shadow: .01px .01px 8px rgba(0, 0, 0, 0.384);
+}
+
+#insersion-data {
+    grid-area: insersion-data;
+    margin: 0;
+    padding: 20px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.384);
+}
+
+#grafic-plot {
+    grid-area: grafic-plot;
+    margin-top: 5px;
+}
+
+header > img {
+    display: block;
+    margin-left: 20px;
+}
+
+#distribuction-type, #first-number-sucess, #second-probably-sucess {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+#distribuction-type > p:nth-child(1), #first-number-sucess > p, #second-probably-sucess > p {
+    font: normal normal .83em 'open-sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: rgb(70, 70, 70);
+}
+
+#distribuction-type > p:nth-child(2) {
+    font: normal normal .95em 'open-sans', sans-serif;
+    padding-bottom: 3px;
+    color: rgb(14, 14, 14);
+    border: 1px solid rgb(88, 88, 88);
+    border-width: 0 0 1px 0;
+}
+
+div > p > i {
+    margin-left: 50%;
+    color: rgb(88, 88, 88)
+}
+
+#first-number-sucess > input, #second-probably-sucess > input {
+    font: normal normal .85em 'open-sans', sans-serif;
+    margin-top: 5px;
+    padding: 2px;
+    color: rgb(14, 14, 14);
+    border: 1px solid rgb(88, 88, 88);
+    border-width: 0 0 1px 0;
+}
+
+div:nth-of-type(2), div:nth-of-type(3){
+    margin-top: 50px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>gerate bn</title>
+</head>
+
+<body id="container">
+
+    <header id="header">
+        <img src="/img/mono.png" alt="">
+    </header>
+
+    <form id="insersion-data">
+        <div id="distribuction-type">
+            <p>Distibuição</p>
+            <p>Binomial Negativa<i class="fas fa-caret-down"></i></p>
+        </div>
+
+        <div id="first-number-sucess">
+            <p>Parâmetro n</p>
+            <input type="text" id="param-n" value="10">
+        </div>
+
+        <div id="second-probably-sucess">
+            <p>Parâmetro p</p>
+            <input type="text" id="param-p" value="0.5">
+        </div>
+    </form>
+
+    <!--<button id="teste">teste</button>-->
+
+    <section id="grafic-plot">
+        <canvas id="myChart"></canvas>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./js/myPlot.js"></script>
+    <script type="module" src="./js/calc.js"></script>
+</body>
+
+</html>
