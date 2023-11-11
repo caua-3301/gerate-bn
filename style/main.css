@@ -48,8 +48,9 @@ body {
 
 #insersion-data {
     grid-area: insersion-data;
+    position: relative;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.384);
 }
 
@@ -78,7 +79,6 @@ header>img {
     width: 98%;
 }
 
-#distribuction-type>p:nth-child(1),
 #first-number-sucess>p,
 #second-probably-sucess>p {
     font: normal normal .83em 'open-sans', sans-serif;
@@ -87,9 +87,17 @@ header>img {
     color: rgb(70, 70, 70);
 }
 
+#distribuction-type>div>p:nth-child(1) {
+    font: normal normal .83em 'open-sans', sans-serif;
+    padding: 0;
+    margin: 20px 0 0 0;
+    color: rgb(70, 70, 70);
+}
+
 #distribuction-type>p:nth-child(2) {
     font: normal normal .95em 'open-sans', sans-serif;
     padding-bottom: 3px;
+    margin: 0;
     color: rgb(14, 14, 14);
     border: 1px solid rgb(88, 88, 88);
     border-width: 0 0 1px 0;
@@ -170,6 +178,56 @@ div:nth-of-type(3) {
     border-width: 0 1px 1px 1px;
     font: normal normal .8em 'open-sans', sans-serif;
 }
+
+#other-values {
+    display: flex;
+    margin-top: 30px;
+    padding: 0;
+    flex-direction: column;
+}
+
+#other-values > div {
+    margin: 10px 0;
+    padding: 0;
+}
+
+#other-values > div > p:first-child, #change-view > p {
+    font: normal normal .83em 'open-sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: rgb(70, 70, 70);
+}
+
+#other-values > div > p:nth-of-type(2) {
+    margin: 8px 0;
+    font: normal normal .9em 'open-sans', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+#change-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#distribuction-type > div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#distribuction-type > div > div > i{
+    color:rgb(87, 87, 87);
+}
+
+#distribuction-type > div > div {
+    cursor: pointer;
+}
+
+
 
 /*--------------------------------*/
 .data-none {

@@ -1,5 +1,4 @@
 //Funcoes auxiliares no calculo das probabilidades
-
 const fatorial = (num) => {
     let fatorial = 1;
     for (let aux = num; aux > 1; aux--) {
@@ -14,5 +13,16 @@ const gerarBinomio = (n, k) => {
     return fatorial(valorChave) / (fatorial(k) * (fatorial(valorChave - k)))
 }
 
-export { gerarBinomio }
+//Calculando a media
+const valorEsperanca = (n, p) => {
+    return (n * p) / (1 - p);
+}
 
+//Calculando a variancia
+const valorVariancia = (n, p) => {
+    return (p * n) / Math.pow((1 - p), 2);
+}
+
+const calcDesvioPadrao = variancia => Math.sqrt(variancia);
+
+export { gerarBinomio, valorEsperanca, valorVariancia, calcDesvioPadrao }

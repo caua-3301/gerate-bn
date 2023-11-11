@@ -28,9 +28,16 @@
         </div>
     </section>
 
-    <form id="insersion-data">
+    <section id="insersion-data">
+
         <div id="distribuction-type">
-            <p>Distibuição</p>
+            <div>
+                <p>Distibuição</p>
+                <div id="change-view">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Linhas</p>
+                </div>
+            </div>
             <p>Binomial Negativa<i class="fas fa-caret-down"></i></p>
         </div>
 
@@ -43,7 +50,24 @@
             <p>Parâmetro p</p>
             <input type="text" id="param-p" value="0.5">
         </div>
-    </form>
+
+        <div id="other-values">
+            <div>
+                <p>Média ou valor esperança</p>
+                <p id="esperanca">E(x) =</p>
+            </div>
+
+            <div>
+                <p>Variância</p>
+                <p id="variancia">Var(x) =</p>
+            </div>
+
+            <div>
+                <p>Desvio padrão</p>
+                <p id="desvio-padrao">Dp(x) =</p>
+            </div>
+        </div>
+    </section>
 
     <section id="table-view" class="data-none ">
         <table class="active-table-view">
@@ -53,9 +77,7 @@
                     <td>Px(x)</td>
                 </tr>
             </thead>
-
             <tbody id="out-table">
-        
             </tbody>
         </table>
     </section>
@@ -69,7 +91,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="./js/myPlot.js"></script>
     <script type="module" src="./js/animation.js"></script>
-    <script type="module" src="./js/calc.js"></script>
+    <script type="module" src="./js/otherCalcs.js"></script>
 </body>
 
 </html>

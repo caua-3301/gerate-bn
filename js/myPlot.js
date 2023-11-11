@@ -2,19 +2,17 @@
 //Importando o valor das labels
 import { probabildiadeDeOcorrer, labelMeuDataSet, gerarValores } from "./calc.js";
 import { dataMyTable } from "./animation.js";
+import { format, control } from "./otherCalcs.js";
 
 export function activeMyPlot() {
   dataMyTable()
-
-  console.log(labelMeuDataSet)
-  console.log(probabildiadeDeOcorrer)
   //Configurações do meu gráfico -------------------
   let delayed;
   const ctx = document.getElementById('myChart');
 
   //Reservando myPlot em um objeto global (eu sei que não é aconselhado)
   Object.myPlot = new Chart(ctx, {
-    type: 'bar',
+    type: format[control],
     data: {
       labels: labelMeuDataSet,
       datasets: [{
@@ -46,7 +44,7 @@ export function activeMyPlot() {
             family: 'open-sans',
             size: 16,
             style: 'normal',
-            weight: 'normal',
+            weight: 'bold',
             lineHeight: 1.2
           },
         },

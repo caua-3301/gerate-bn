@@ -1,17 +1,15 @@
 import { activeMyPlot } from "./myPlot.js";
 import { gerarBinomio } from "./myFunctions.js";
+import { atualizarExibicoOther } from "./otherCalcs.js";
 
 //Variaveis que serao exportadas e serem plotadas
 export let probabildiadeDeOcorrer = [];
 export let labelMeuDataSet = [];
 
-//Maximo de simulacoes
-const MAX = 41;
-
 //Parametro n = numero de tentativas
-const parametroN = document.querySelector("#param-n");
+export const parametroN = document.querySelector("#param-n");
 //Probabilidade de um sucesso acontecer
-const parametroP = document.querySelector("#param-p");
+export const parametroP = document.querySelector("#param-p");
 
 //Ativando geração do gráfico sempre que um label é editada
 parametroN.addEventListener("input", () => { gerarValores(parseInt(parametroN.value), parseFloat(parametroP.value)) })
@@ -40,6 +38,7 @@ function gerarValores(n, p) {
     }
     Object.myPlot.destroy();
     activeMyPlot()
+    atualizarExibicoOther(n, p)
 }
 
 export { gerarValores }
