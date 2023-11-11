@@ -6,7 +6,7 @@ export let probabildiadeDeOcorrer = [];
 export let labelMeuDataSet = [];
 
 //Maximo de simulacoes
-const MAX = 40;
+const MAX = 41;
 
 //Parametro n = numero de tentativas
 const parametroN = document.querySelector("#param-n");
@@ -22,11 +22,19 @@ const calcularFmp = (n, p, k) => {
     return gerarBinomio(n, k) * Math.pow(p, n) * Math.pow(1 - p, k)
 }
 
+//Definindo escala do gráfico
+const verificarN = n => {
+    if (n <= 5) { return 16 }
+    else if (n > 5 && n <= 15) { return 41 }
+    else if (n > 15 && n <= 50) { return 61 }
+    else if (n > 50) { return 81 }
+}
+
 //Gerando os valores para a label do grafico bem como os valores apresentados
 function gerarValores(n, p) {
     probabildiadeDeOcorrer = [];
     labelMeuDataSet = [];
-    for (let index = 0; index < MAX; index++) {
+    for (let index = 0; index < (verificarN(n)); index++) {
         probabildiadeDeOcorrer.push(calcularFmp(n, p, index));
         labelMeuDataSet.push(index);
     }
@@ -34,4 +42,4 @@ function gerarValores(n, p) {
     activeMyPlot()
 }
 
-export {gerarValores}
+export { gerarValores }

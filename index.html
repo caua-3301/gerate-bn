@@ -15,6 +15,19 @@
         <img src="/img/mono.png" alt="">
     </header>
 
+    <section id="select-visualization">
+        <div id="selcet">
+            <div id="grafic">
+                <i class="fas fa-chart-bar"></i>
+                <p>Distribuição</p>
+            </div>
+            <div id="table">
+                <i class="fas fa-table"></i>
+                <p>Tabela</p>
+            </div>
+        </div>
+    </section>
+
     <form id="insersion-data">
         <div id="distribuction-type">
             <p>Distibuição</p>
@@ -32,6 +45,21 @@
         </div>
     </form>
 
+    <section id="table-view" class="data-none ">
+        <table class="active-table-view">
+            <thead>
+                <tr>
+                    <td>K</td>
+                    <td>Px(x)</td>
+                </tr>
+            </thead>
+
+            <tbody id="out-table">
+        
+            </tbody>
+        </table>
+    </section>
+
     <!--<button id="teste">teste</button>-->
 
     <section id="grafic-plot">
@@ -40,6 +68,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="./js/myPlot.js"></script>
+    <script type="module" src="./js/animation.js"></script>
     <script type="module" src="./js/calc.js"></script>
 </body>
 

@@ -1,8 +1,10 @@
 
 //Importando o valor das labels
 import { probabildiadeDeOcorrer, labelMeuDataSet, gerarValores } from "./calc.js";
+import { dataMyTable } from "./animation.js";
 
 export function activeMyPlot() {
+  dataMyTable()
 
   console.log(labelMeuDataSet)
   console.log(probabildiadeDeOcorrer)
@@ -73,7 +75,7 @@ export function activeMyPlot() {
           display: true,
           title: {
             display: true,
-            text: '(r)',
+            text: '(k)',
             color: '#5271FF',
             font: {
               family: 'code-pro',

@@ -7,7 +7,7 @@ body {
 
 :root {
     --color-theme: #5271FF;
-} 
+}
 
 @font-face {
     font-family: 'code-pro';
@@ -20,13 +20,14 @@ body {
 }
 
 #container {
+    position: relative;
     display: grid;
-    grid-template-columns: .35fr 1fr;
+    grid-template-columns: 6% 20% 1fr;
     grid-template-rows: .13fr 1fr;
-    grid-template-areas: "header header"
-        "insersion-data grafic-plot";
+    grid-template-areas: "header header header"
+        "select-visualization insersion-data grafic-plot";
     height: 100vmin;
-    width: 100%;
+    width: 100vw;
     gap: 15px;
 }
 
@@ -35,6 +36,14 @@ body {
     display: flex;
     flex-direction: row;
     box-shadow: .01px .01px 8px rgba(0, 0, 0, 0.384);
+}
+
+#select-visualization {
+    grid-area: select-visualization;
+    box-shadow: .01px 5px 8px rgba(0, 0, 0, 0.384);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 #insersion-data {
@@ -46,28 +55,39 @@ body {
 
 #grafic-plot {
     grid-area: grafic-plot;
-    margin-top: 5px;
+    margin: 5px 25px 0 0;
 }
 
-header > img {
+#table-view {
+    grid-area: insersion-data;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.384);
+}
+
+header>img {
     display: block;
     margin-left: 20px;
 }
 
-#distribuction-type, #first-number-sucess, #second-probably-sucess {
+#distribuction-type,
+#first-number-sucess,
+#second-probably-sucess {
     display: flex;
     flex-direction: column;
     width: 98%;
 }
 
-#distribuction-type > p:nth-child(1), #first-number-sucess > p, #second-probably-sucess > p {
+#distribuction-type>p:nth-child(1),
+#first-number-sucess>p,
+#second-probably-sucess>p {
     font: normal normal .83em 'open-sans', sans-serif;
     padding: 0;
     margin: 0;
     color: rgb(70, 70, 70);
 }
 
-#distribuction-type > p:nth-child(2) {
+#distribuction-type>p:nth-child(2) {
     font: normal normal .95em 'open-sans', sans-serif;
     padding-bottom: 3px;
     color: rgb(14, 14, 14);
@@ -75,12 +95,13 @@ header > img {
     border-width: 0 0 1px 0;
 }
 
-div > p > i {
-    margin-left: 50%;
+div>p>i {
+    margin-left: 38%;
     color: rgb(88, 88, 88)
 }
 
-#first-number-sucess > input, #second-probably-sucess > input {
+#first-number-sucess>input,
+#second-probably-sucess>input {
     font: normal normal .85em 'open-sans', sans-serif;
     margin-top: 5px;
     padding: 2px;
@@ -89,6 +110,72 @@ div > p > i {
     border-width: 0 0 1px 0;
 }
 
-div:nth-of-type(2), div:nth-of-type(3){
+div:nth-of-type(2),
+div:nth-of-type(3) {
     margin-top: 50px;
+}
+
+#select-visualization>div>div {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#select-visualization>div>div:hover {
+    background-color: rgb(182, 195, 255);
+    transition: all .6s;
+}
+
+#select-visualization>div>div>i {
+    color: #5271FF;
+    font-size: 1.3em;
+    padding: 5px;
+    transition: all .6s;
+    text-align: center;
+}
+
+#select-visualization>div>div>p {
+    font: normal normal .8em 'open-sans', sans-serif;
+    padding-bottom: 3px;
+    margin-top: 4px;
+    color: rgb(14, 14, 14);
+}
+
+/*ZONA DE ANIMAÇÃO*/
+
+.active-table-view {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.active-table-view>thead>tr {
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    font: normal bold .9em 'open-sans', sans-serif;
+}
+
+.active-table-view>thead>tr>td {
+    border: 1px solid rgb(136, 136, 136);
+    padding: 5px;
+    border-width: 1px 1px 0 1px;
+    width: 50%;
+}
+
+.active-table-view>tbody td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid rgb(189, 189, 189);
+    border-width: 0 1px 1px 1px;
+    font: normal normal .8em 'open-sans', sans-serif;
+}
+
+/*--------------------------------*/
+.data-none {
+    display: none;  
+}
+
+.active-table {
+    display: auto;
 }
