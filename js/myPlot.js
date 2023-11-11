@@ -30,7 +30,7 @@ export function activeMyPlot() {
         delay: (context) => {
           let delay = 0;
           if (context.type === 'data' && context.mode === 'default' && !delayed) {
-            delay = context.dataIndex * 300 + context.datasetIndex * 100;
+            delay = context.dataIndex * 150 + context.datasetIndex * 50;
           }
           return delay;
         },
