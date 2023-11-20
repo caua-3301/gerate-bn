@@ -34,6 +34,7 @@ body {
 #header {
     grid-area: header;
     display: flex;
+    align-items: center;
     flex-direction: row;
     box-shadow: .01px .01px 8px rgba(0, 0, 0, 0.384);
 }
@@ -227,6 +228,34 @@ div:nth-of-type(3) {
     cursor: pointer;
 }
 
+.botom {
+    width: 100px;
+    height: 35px;
+    background-color: #5a78ff;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    right: 30px;
+    position: absolute;
+    font: normal bold .8em 'open-sans', sans-serif;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.botom:hover{
+    background-color: #6c87ff;
+    transform: all .5s;
+}
+
+#header > a {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    text-decoration: none;
+}
 
 
 /*--------------------------------*/

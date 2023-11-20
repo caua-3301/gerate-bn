@@ -30,3 +30,7 @@ modoLinha.addEventListener("click", _ => {
 })
 
 export { atualizarExibicoOther, checarFormato }
+
+//Mudando de url
+const moreInfo = document.querySelector("#more-info");
+moreInfo.addEventListener("click", _ => window.location.href = '../src/more.html')
