@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'code-pro';
+    src: url("/fonts/code-pro/static/SourceCodePro-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url("/fonts/open-sans/static/OpenSans-Regular.ttf");
+}
+
+#container-sec {
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    grid-template-rows: .13fr auto;
+    grid-template-areas: "header header"
+        "select-conteudo conteudo";
+    gap: 10px;
+    width: 100%;
+    height: 100vmin;
+}
+
+#header {
+    grid-area: header;
+}
+
+#select-conteudo {
+    grid-area: select-conteudo;
+
+}
+
+#conteudo {
+    grid-area: conteudo;
+}
+
+#select-inter {
+    margin: 20px 0 0 90px;
+    position: fixed;
+    width: 250px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 0;
+}
+
+#select-inter>h3 {
+    font: normal bold .85em 'open-sans', sans-serif;
+    padding: 7px;
+    color: white;
+    margin: 0 0 10px 0;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    background-color: #5271FF;
+}
+
+#select-inter>div {
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+
+#select-inter>p {
+    margin: 10px 0 0 10px;
+    font: normal normal .8em 'open-sans', sans-serif;
+}
+
+#select-inter>div>p {
+    font: normal bold .8em 'open-sans', sans-serif;
+    padding: 0;
+    margin: 0 0 8px 0;
+    cursor: pointer;
+}
+
+.decoration {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 0;
+}
+
+.decoration:last-child {
+    margin-bottom: 80px;
+}
+
+.decoration > h3{
+    font: normal bold .9em 'open-sans', sans-serif;
+    padding: 8px;
+    color: white;
+    margin: 0;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: #5271FF;
+}
+
+.decoration > p{
+    font: normal normal .85em 'open-sans', sans-serif;
+    padding: 10px;
+}
+
+#content-every > div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 0;
+    margin: 20px 0 30px 0;
+}
+
+#content-every > div > h2 {
+    font: normal normal 1.8em 'open-sans', sans-serif;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+#content-every > div > p:not(#decoration > p) {
+    font: normal normal .9em 'open-sans', sans-serif;
+    margin: 5px 0 0 0;
+    line-height: 23px;
+}
+
+#pressu > h3{
+    background-color: #60688f;
+}
+
+.example {
+    font: normal bold 1.2em 'open-sans', sans-serif;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+h3 > a {
+    color: white;
+}

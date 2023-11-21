@@ -10,11 +10,447 @@
     <title>gerate bn</title>
 </head>
 
-<body id="container">
+<body id="container-sec">
     <header id="header">
         <img src="/img/mono.png" alt="">
         <a href="../index.html"><span id="retornar" class="botom">Retornar</span></a>
-    </header>   
+    </header>
+
+    <section id="select-conteudo">
+        <section id="select-inter">
+            <h3><a href="#conteudo">Distribuição Binomial Negativa</a></h3>
+            <div id="examples">
+                <p><a href="#ex1">Exemplo - Binomial Negativa 01</a></p>
+                <p><a href="#ex2">Exemplo - Binomial Negativa 02</a></p>
+            </div>
+            <p><a href="#credits">Créditos</a></p>
+        </section>
+    </section>
+
+    <section id="conteudo">
+        <section id="content-every">
+            <div>
+                <h2>Distribuição do tempo de espera</h2>
+                <p>As distribuições do tempo de espera é outra importante classe de problemas associados com a
+                    quantidade de tempo que leva para a ocorrência de um evento específico de interesse. Dentro dessa
+                    classe de problemas se enquadram duas distribuições bastante conhecidas, são elas:
+                    <strong>Distribuição Geométrica e a Distribuição Binomial Negativa.</strong>
+                </p>
+            </div>
+
+            <div>
+                <h2>Distribuição Binomial Negativa</h2>
+                <p>Podemos generalizar um problema e considerar o caso em que nós esperamos por mais de um único
+                    sucesso. Suponha que desejamos conduzir repetidos experimentos Bernoulli, observando os respectivos
+                    sucessos e falhas. <strong>
+                        Seja X a contagem do número de falhas antes de r sucessos. e P(Sucesso)=p então X possui a
+                        seguinte PMF
+                    </strong>.</p>
+            </div>
+
+            <div class="decoration">
+                <h3>Variável Aleatória Generalizada</h3>
+                <p>Seja X a contagem do <strong>número de falhas antes de r sucessos.</strong></p>
+            </div>
+
+            <div class="decoration">
+                <h3>Função Massa de Probabilidade</h3>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <msub>
+                            <mi>p</mi>
+                            <mi>X</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mi>x</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mtable rowspacing="4pt" columnspacing="1em">
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mi>r</mi>
+                                            <mo>+</mo>
+                                            <mi>x</mi>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mi>r</mi>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                        </mrow>
+                        <msup>
+                            <mi>p</mi>
+                            <mi>r</mi>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mi>p</mi>
+                        <msup>
+                            <mo stretchy="false">)</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>x</mi>
+                            </mrow>
+                        </msup>
+                    </math></p>
+            </div>
+
+            <div>
+                <p>Outra generalização da binomial negativa segue a mesma ideia da distribuição geométrica quanto à
+                    generalização da variável aleatória.</p>
+            </div>
+
+            <div class="decoration">
+                <h3>Variável Aleatória Generalizada</h3>
+                <p>Seja Y a contagem do número de tentativas <strong> até que r sucessos ocorram </strong>.</p>
+            </div>
+
+            <div class="decoration">
+                <h3>Função Massa de Probabilidade</h3>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <msub>
+                            <mi>p</mi>
+                            <mi>Y</mi>
+                        </msub>
+                        <mo stretchy="false">(</mo>
+                        <mi>y</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>Y</mi>
+                        <mo>=</mo>
+                        <mi>y</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mtable rowspacing="4pt" columnspacing="1em">
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mi>y</mi>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mi>r</mi>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                        </mrow>
+                        <msup>
+                            <mi>p</mi>
+                            <mi>r</mi>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mi>p</mi>
+                        <msup>
+                            <mo stretchy="false">)</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mi>y</mi>
+                                <mo>&#x2212;<!-- − --></mo>
+                                <mi>r</mi>
+                            </mrow>
+                        </msup>
+                    </math>.</p>
+            </div>
+
+            <div>
+                <p>Podemos dizer que X
+                    possui uma distribuição binomial negativa e escrever<strong> X∼BinNeg(r,p)</strong></p>
+            </div>
+
+            <div class="decoration">
+                <h3>Valor Esperado e variância</h3>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mi>E</mi>
+                        <mo stretchy="false">[</mo>
+                        <mi>X</mi>
+                        <mo stretchy="false">]</mo>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mi>r</mi>
+                            <mi>p</mi>
+                        </mfrac>
+                    </math></p>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mi>V</mi>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mrow>
+                                <mi>r</mi>
+                                <mo stretchy="false">(</mo>
+                                <mn>1</mn>
+                                <mo>&#x2212;<!-- − --></mo>
+                                <mi>p</mi>
+                                <mo stretchy="false">)</mo>
+                            </mrow>
+                            <msup>
+                                <mi>p</mi>
+                                <mn>2</mn>
+                            </msup>
+                        </mfrac>
+                    </math></p>
+            </div>
+
+
+            <div class="decoration" id="pressu">
+                <h3>Pressupostos</h3>
+                <p>- O resultado é completamente determinado por chance (aleatório);</p>
+                <p>- Existem somente dois possíveis resultados, experimento Bernoulli;</p>
+                <p>- Todas as tentativas possuem a mesma probabilidade para um resultado em particular. Ou seja, as
+                    tentativas ou realizações do experimento <strong>são independentes;</strong></p>
+                <p>- Isso implica que, existe uma probabilidade p
+                    de sucesso constante em cada tentativa</p>
+            </div>
+
+            <div>
+                <h3 class="example" id="ex1">Exemplo - Binomial Negativa 1</h3>
+                <p>Lançamos repetidas vezes uma moeda. Seja X
+                    o número de caras até que consigamos sete coroas. Qual é a probabilidade de que o número de caras
+                    seja igual a cinco até que consigamos as sete coroas,P(X=5)
+                    ?</p>
+            </div>
+
+            <div>
+                <p><strong>Solução <br> <br> Sabemos que X∼BinNeg(7,0.5). </strong>
+                    Seja X o número de caras até que consigamos sete coroas, com p=0.5. Assim, temos que,</p>
+            </div>
+
+            <div>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mn>5</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mtable rowspacing="4pt" columnspacing="1em">
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mn>7</mn>
+                                            <mo>+</mo>
+                                            <mn>5</mn>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mn>7</mn>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                        </mrow>
+                        <msup>
+                            <mn>0.5</mn>
+                            <mn>7</mn>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mn>0.5</mn>
+                        <msup>
+                            <mo stretchy="false">)</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mn>5</mn>
+                            </mrow>
+                        </msup>
+                        <mo>=</mo>
+                        <mn>0.112793</mn>
+                    </math></p>
+                <p>Experimente colocar no gráfico.</p>
+            </div>
+
+            <div>
+                <h3 class="example" id="ex2">Exemplo - Binomial Negativa 2</h3>
+                <p>Considere o tempo para recarregar o flash de uma câmera de celular. Assuma que a probabilidade de que
+                    uma câmera instalada no celular durante sua montagem passe no teste é de 0.80, e que cada câmera tem
+                    seu desempenho independente. Determine as seguintes probabilidades.</p>
+            </div>
+
+            <div id="quest">
+                <p> a) Qual é a probabilidade de que a segunda falha ocorra na décima câmera testada?</p>
+                <p> b) Qual é a probabilidade de que a segunda falha ocorra no teste de quatro ou menos câmeras?</p>
+                <p></p>
+            </div>
+
+            <div>
+                <p><strong>Solução <br> <br> </strong>a) Qual é a probabilidade de que a segunda falha ocorra na décima
+                    câmera testada? Note que Y
+                    é igual ao número de câmeras testadas para detectar duas falhas, <strong>
+                        X∈{2,3,4,...}
+                        . Assim X
+                        tem distribuição binomial negativa com probabilidade de falha de p=1−0.8=0.2
+                        e r=2
+                        .
+                    </strong></p>
+            </div>
+
+            <div>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mn>10</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow>
+                            <mo>(</mo>
+                            <mtable rowspacing="4pt" columnspacing="1em">
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mn>10</mn>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                                <mtr>
+                                    <mtd>
+                                        <mrow class="MJX-TeXAtom-ORD">
+                                            <mn>2</mn>
+                                            <mo>&#x2212;<!-- − --></mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mtd>
+                                </mtr>
+                            </mtable>
+                            <mo>)</mo>
+                        </mrow>
+                        <msup>
+                            <mn>0.2</mn>
+                            <mn>2</mn>
+                        </msup>
+                        <mo stretchy="false">(</mo>
+                        <mn>1</mn>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mn>0.2</mn>
+                        <msup>
+                            <mo stretchy="false">)</mo>
+                            <mrow class="MJX-TeXAtom-ORD">
+                                <mn>10</mn>
+                                <mo>&#x2212;<!-- − --></mo>
+                                <mn>2</mn>
+                            </mrow>
+                        </msup>
+                        <mo>=</mo>
+                        <mn>0.06039798</mn>
+                    </math></p>
+            </div>
+
+            <div>
+                <p>b) Qual é a probabilidade de que a segunda falha ocorra no teste de quatro ou menos câmeras? Note que
+                    Y
+                    é igual ao número de câmeras testadas para detectar três falhas, X∈{2,3,4,...}
+                    . <strong>
+                        Assim X
+                        tem distribuição binomial negativa com probabilidade de falha de p=1−0.8=0.2
+                        e r=2
+                    </strong></p>
+            </div>
+            <div>
+                <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>&#x2264;<!-- ≤ --></mo>
+                        <mn>4</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mn>2</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>+</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mn>3</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>+</mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                            <mi mathvariant="double-struck">P</mi>
+                        </mrow>
+                        <mo stretchy="false">(</mo>
+                        <mi>X</mi>
+                        <mo>=</mo>
+                        <mn>4</mn>
+                        <mo stretchy="false">)</mo>
+                        <mo>=</mo>
+                        <mn>0.1808</mn>
+                    </math></p>
+            </div>
+        </section>
+
+        <div class="decoration" id="credits"> 
+            <h3>Créditos</h3>
+            <p>Todos os direitos reservados para: Andre Zibetti</p>
+            <p>Acesse em: <a href="https://www.inf.ufsc.br/~andre.zibetti/probabilidade/binomial_negativa.html#Distribui%C3%A7%C3%A3o_Binomial_Negativa">Distribuição binomial neativa por Andre Zibetti</a></p>
+        </div>
+    </section>
 
     <script type="module" src="../js/otherCalcs.js"></script>
 </body>
